@@ -166,34 +166,35 @@ function LoadManager() {
         Body = document.querySelector("body");
         current = 0;
         Sliderflag = false;
-       
-        if (window.location.pathname == '/index.html' ||
-            window.location.pathname == '/instructionmanual.html' ||
-            window.location.pathname == '/introduction.html' ||
-            window.location.pathname == '/searchelsewhere.html') {
-            FirstLoad();
+        
+        
+        if (window.location.pathname == '/DHM/index.html' ||
+            window.location.pathname == '/DHM/instructionmanual.html' ||
+            window.location.pathname == '/DHM/introduction.html' ||
+            window.location.pathname == '/DHM/searchelsewhere.html') {
+                FirstLoad();
         }
 
-        if (window.location.pathname == '/beforewestart.html') {
+        if (window.location.pathname == '/DHM/beforewestart.html') {
             init();
         }
 
-        if (window.location.pathname == '/instructionmanual.html') {
+        if (window.location.pathname == '/DHM/instructionmanual.html') {
             StartSlider();
         }
 
-        if (window.location.pathname == '/index.html') {
+        if (window.location.pathname == '/DHM/index.html') {
             AboutRedirect();
         }
 
-        if (window.location.pathname == '/topic/whatdh.html' ||
-            window.location.pathname == '/topic/opensource.html' ||
-            window.location.pathname == '/topic/generativehumanities.html' ||
-            window.location.pathname == '/topic/processgod.html' ||
-            window.location.pathname == '/topic/theorypractice.html' ||
-            window.location.pathname == '/topic/curation.html' ||
-            window.location.pathname == '/topic/discfinitude.html' ||
-            window.location.pathname == '/topic/beyonddh.html') {
+        if (window.location.pathname == '/DHM/topic/whatdh.html' ||
+            window.location.pathname == '/DHM/topic/opensource.html' ||
+            window.location.pathname == '/DHM/topic/generativehumanities.html' ||
+            window.location.pathname == '/DHM/topic/processgod.html' ||
+            window.location.pathname == '/DHM/topic/theorypractice.html' ||
+            window.location.pathname == '/DHM/topic/curation.html' ||
+            window.location.pathname == '/DHM/topic/discfinitude.html' ||
+            window.location.pathname == '/DHM/topic/beyonddh.html') {
             CConScroll();
         }
 
