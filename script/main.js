@@ -168,7 +168,7 @@ function LoadManager() {
         Sliderflag = false;
         
         
-        if (window.location.pathname == '/DHM/index.html' ||
+        if (window.location.pathname == '/DHM/' ||
             window.location.pathname == '/DHM/instructionmanual.html' ||
             window.location.pathname == '/DHM/introduction.html' ||
             window.location.pathname == '/DHM/searchelsewhere.html') {

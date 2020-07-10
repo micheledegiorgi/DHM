@@ -19,7 +19,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #2e282aff url(img/intro-cover.jpg) no-repeat center center center/cover;
+    background: #2e282aff url(img/intro-cover.jpg) no-repeat cover;
 }
 
 .loader-container video {
