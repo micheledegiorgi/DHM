@@ -198,7 +198,7 @@ function LoadManager() {
             CConScroll();
         }
 
-        if (window.location.pathname == '/topic/opensource.html') {
+        if (window.location.pathname == '/DHM/topic/opensource.html') {
             StartTopicSlider();
         }
 
