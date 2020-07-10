@@ -1,0 +1,1157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset for box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif, 'Nunito', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    opacity: 0;
+    display: none;
+    transition: opacity 2s ease-in;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    padding: 0rem 1rem;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 20px 35px;
+    background: rgba(1, 0, 0, 0);
+    color: #fff;
+    border-radius: 0px;
+    border: 1px #fff solid;
+    margin-top: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #17bebbff;
+    transform: scale(0.98);
+}
+
+/* Before we start page*/
+.intro-showcase {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #FFF;
+}
+
+.intro-showcase .btn {
+    margin: 10px 50px;
+}
+
+.intro-showcase #no:hover {
+    background-color: #e4572eff;
+}
+
+.intro-showcase h1 {
+    line-height: 1.1em;
+    font-weight: 800;
+    font-size: 1.777em;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(mg/intro-cover.jpg) no-repeat center center center/cover;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(1, 0, 0, 0.5)
+}
+
+.intro-showcase .container {
+    z-index: 10;
+}
+
+/* Search elsewhere page */
+.nopage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #2e282aff;
+}
+
+.nopage img {
+    width: 100%;
+}
+
+.nopage h1 {
+    color: #fff;
+    font-size: 1.777em;
+    line-height: 1.2em;
+    margin: 40px 0px 20px 0px;
+}
+
+.nopage .btn {
+    padding: 10px 10px;
+}
+
+.nopage .btn:hover {
+    background-color: #e4572eff;
+}
+
+/* Introduction page */
+.intro-header {
+    background-color: #ffc914ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-header .container p {
+    font-size: 1.777em;
+    font-weight: 500;
+    line-height: 1em;
+}
+
+.slider-wrapper {
+    font-size: 2.369em;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.intro-header .slider {
+    height: 70px;
+    padding-top: 10px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+
+.intro-header .slider div {
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 2px 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.slider-text1 {
+    animation: slide 2.5s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        margin-top: -400px;
+    }
+
+    11% {
+        margin-top: -300px;
+    }
+
+    22% {
+        margin-top: -300px;
+    }
+
+    33% {
+        margin-top: -200px;
+    }
+
+    44% {
+        margin-top: -200px;
+    }
+
+    55% {
+        margin-top: -100px;
+    }
+
+    66% {
+        margin-top: -100px;
+    }
+
+    77% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+#intro-content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-content .container {
+    padding: 50px 15px;
+}
+
+#intro-content .container h2 {
+    color: #2e282aff;
+    font-size: 1.777em;
+    line-height: 1.2em;
+    margin-bottom: 30px;
+}
+
+#intro-content .container p {
+    color: #2e282aff;
+}
+
+.intro-header .btn {
+    margin-top: 30px;
+    padding: 10px 10px;
+}
+
+#intro-content .btn {
+    margin-top: 30px;
+    padding: 10px 10px;
+    border: 1px solid #2e282aff;
+    color: #2e282aff;
+}
+
+.intro-header .btn:hover {
+    background: #2e282aff;
+}
+
+#intro-content .btn:hover {
+    background: #2e282aff;
+    border: 1px solid #FFF;
+    color: #fff;
+}
+
+/* Instruction manual page */
+.wrapper {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.slide-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    cursor: pointer;
+}
+
+.slide-content span:first-child {
+    color: #fff;
+    font-size: 1.777em;
+    margin-top: -3px;
+}
+
+.slide-content span {
+    margin-left: 10px;
+    font-size: 1.777em;
+    font-weight: 800;
+}
+
+
+.slide1 {
+    background: #2e282aff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slide2 {
+    background: #ffc914ff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slide3 {
+    background: #e4572eff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slide4 {
+    background: #76b041ff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slide5 {
+    background: #17bebbff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slide-content #button5 span {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 2.369em;
+    margin-top: 0;
+}
+
+.slide5 #button5 {
+    height: 20px;
+    width: auto;
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    animation: CreateButton 1s ease 1 normal forwards;
+    cursor: pointer;
+}
+
+.slide5 #button5:hover {
+    background: #e4572eff;
+    transform: scale(0.98);
+}
+
+@keyframes CreateButton {
+    from {
+        border: 0 #fff solid;
+        padding: 0;
+        padding-top: 0;
+        height: 0;
+    }
+
+    to {
+        border: 1px #fff solid;
+        padding: 10px 10px;
+        height: 100px;
+
+    }
+}
+
+#Ready {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#Ready h2 {
+    color: #2e282aff;
+    font-size: 1.777em;
+
+}
+
+#Ready p {
+    font-family: 'Nunito', sans-serif;
+    color: #2e282aff;
+    font-size: 1em;
+    margin-top: 35px;
+}
+
+#Ready .btn {
+    margin-top: 25px;
+    padding: 10px 10px;
+    border: 1px solid #2e282aff;
+    color: #2e282aff;
+    cursor: pointer;
+}
+
+/* Homepage */
+.topic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    line-height: 1.6em;
+    font-size: 1em;
+}
+
+.topic h2 {
+    line-height: 1.1em;
+    padding: 35px 0;
+}
+
+.topic .btn {
+    padding: 5px 15px;
+}
+
+.topic1 {
+    background: #2e282aff;
+    color: #fff;
+}
+
+.topic2 {
+    background: #17bebbff;
+    
+    color: #fff;
+}
+
+.topic3 {
+    background: #ffc914ff;
+    color: #fff;
+}
+
+.topic4 {
+    background: #76b041ff;
+    color: #fff;
+}
+
+.topic5 {
+    background: #2e282aff;
+    color: #fff;
+}
+
+.topic6 {
+    background: #17bebbff;
+    color: #fff;
+}
+
+.topic7 {
+    background: #76b041ff;
+    color: #fff;
+}
+
+.topic8 {
+    background: #e4572eff;
+    color: #fff;
+}
+
+.topic .btn:hover {
+    background: #fff;
+    color: #2e282aff;
+}
+
+#about {
+    background: #2e282aff;
+    height: auto;
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+}
+
+#about .container {
+    text-align: start;
+}
+
+#about .container h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.777em;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 15px;
+}
+
+#about .container blockquote {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+
+#about .container blockquote > p {
+    font-size: 0.75em;
+    margin: 5px;
+    padding: 0;
+}
+
+#about .container p {
+    color: #fff;
+    margin: 25px 0;
+}
+
+#about .container p a {
+    color: #17bebbff;
+    text-decoration: none;
+}
+
+#about .container p>a:hover {
+    text-decoration: underline;
+}
+
+#about .credits {
+    font-size: 0.75em;
+}
+
+/* Topic related code */
+.topic-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    color: #2e282aff;
+    padding: 0;
+}
+
+.topic-content h2,
+.topic-content h3 {
+    text-align: center;
+    margin-top: 65px;
+    line-height: 1.1em;
+}
+
+.topic-content h3 {
+    margin-bottom: 20px;
+}
+
+.topic-content p {
+    margin: 30px 0;
+}
+
+.topic-content p > img {
+    padding: 30px 0;
+}
+
+.topic-content ul {
+
+    margin: -20px 0px 30px 15px;
+}
+
+.topic-content ul li {
+    padding-bottom: 10px;
+}
+
+.topic-content img {
+   display: block;
+   margin: auto;
+   width: 100%;
+}
+
+.topic-content picture {
+    display: block;
+    margin: 30px auto;
+    margin: 30px 0;
+}
+
+.topic-content picture > p{
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.topic-content figcaption {
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.topic-content figcaption a {
+    color: #17bebbff;
+    text-decoration: none;
+}
+
+.topic-content figcaption a:hover {
+    text-decoration: underline;
+}
+
+.content-container {
+    margin: 0;
+    overflow: hidden;
+    padding: 2.5rem 1rem;
+    width: 30em;
+}
+
+.next-topic-showcase {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #FFF;
+}
+
+.next-topic-showcase .container {
+    z-index: 10;
+}
+
+.next-topic-showcase .btn {
+    padding: 10px
+}
+
+.next-topic-showcase .container .btn:hover {
+    transform: scale(0.98);
+    background: #fff;
+    color: #000;
+}
+
+.next-topic-showcase h2 {
+    font-size: 1.777em;
+    line-height: 1.3em;
+    margin: 15px 0;
+}
+
+.next-topic-showcase p {
+    font-size: 1.333em;
+    margin: 5px 0;
+}
+
+.next-topic-showcase .btn {
+    margin: 20px 0;
+}
+
+/* What is(n't) Digital Humanities page */
+.topic1 video {
+    left: 90%;
+}
+
+/* Open source page */
+.topic-slide-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 85vh;
+    color: #fff;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+}
+
+.topicslider {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topicslider h2 {
+    text-align: center;
+    font-size: 1.777em;
+    line-height: 1.2em;
+    color: #2e282aff;
+    margin: 30px 0;
+}
+
+.topicslider img {
+    width: 100%;
+}
+
+.topicslider .slide1 {
+    background: #76b041ff;
+}
+
+.topicslider .slide2 {
+    background: #ffc914ff;
+}
+
+.topicslider .slide3 {
+    background: #e4572eff;
+}
+
+.topic-slide-content span {
+    font-size: 2.369em;
+    font-weight: 800;
+    margin: 40px 0;
+}
+
+/* Process is the new god page */
+.topic-content .content-container span {
+    text-decoration: line-through;
+}
+
+.topic-content .chad,
+.topic-content .virgin {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topic-content .chad img,
+.topic-content .virgin img {
+    width: 50%;
+    margin: 15px 0 35px 0;
+}
+
+/* Making theory, making practice page */
+.topic-content .logo {
+    width: 200px;
+}
+
+/* Media queries */
+@media screen and (min-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    /* Topic related code */
+    .intro-showcase h1 {
+        font-size: 2.369em;
+    }
+
+    .intro-showcase h3 {
+        font-size: 1.333em;
+    }
+
+    .topic-content h2 {
+        font-size: 1.777em;
+    }
+
+    .topic-content h3 {
+        font-size: 1em;
+    }
+
+    .topic-content img {
+        width: 450px;
+    }
+
+    .next-topic-showcase h2 {
+        font-size: 1.777em;
+    }
+
+    /* Search elsewhere page */
+    .nopage img {
+        width: 400px;
+    }
+
+    /* Introduction page*/
+    .slider-wrapper {
+        font-size: 3.157em;
+    }
+
+    #intro-content .container h2 {
+        font-size: 2.369em;
+    }
+
+    #intro-content .container {
+        width: 80%;
+    }
+
+    /* Instruction */
+    .slide-content span:first-child {
+        font-size: 2.369em;
+    }
+
+    .slide-content span {
+        font-size: 2.369em;
+        font-weight: 800;
+    }
+
+    #Ready h2 {
+        font-size: 2.369em;
+    }
+
+    #Ready p {
+        font-size: 1em;
+    }
+
+    /* Homepage */
+    .topic .btn {
+        font-size: 1em;
+    }
+
+    .topic {
+        font-size: 1.333em;
+    }
+
+    #about .container h2 {
+        font-size: 2.369em;
+    }
+
+    /* What isn't Digital Humanities page */
+    .video-container video {
+        left: 450px;
+    }
+
+    /* Open source page */
+    .topicslider img {
+        width: 450px;
+        margin-bottom: 30px;
+    }
+
+    /* Process is the new god page */
+    .topic-content .chad img,
+    .topic-content .virgin img {
+        width: 200px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    .btn {
+        font-size: 1.333em;
+    }
+
+    /* Before we start page*/
+    .intro-showcase h1 {
+        font-size: 2.369em;
+    }
+
+    .intro-showcase .container {
+        width: 80%;
+    }
+
+    /* Search elsewhere page */
+    .nopage h1 {
+        font-size: 2.369em;
+    }
+
+    .nopage img {
+        width: 400px;
+    }
+
+    /* Introduction page */
+    .slider-wrapper {
+        font-size: 3.157em;
+    }
+
+    #intro-content .container p {
+        padding: 0 80px;
+    }
+
+    #intro-content .container h2 {
+        font-size: 2.369em;
+    }
+
+    /* Instruction */
+    .slide-content span {
+        font-size: 3.157em;
+    }
+
+    .slide-content span:first-child {
+        font-size: 4.209em;
+        margin-top: -10px;
+    }
+
+    .slide-content #button5 span {
+        font-size: 3.157em;
+    }
+
+    .slide-content #button5 span {
+        font-size: 4.209em;
+    }
+
+    @keyframes CreateButton {
+        from {
+            border: 0 #fff solid;
+            padding: 0;
+            padding-top: 0;
+            height: 0;
+        }
+
+        to {
+            border: 1px #fff solid;
+            padding: 10px 10px;
+            height: 120px;
+
+        }
+    }
+
+    #Ready h2 {
+        font-size: 3.157em;
+    }
+
+    #Ready p {
+        font-size: 1em;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    /* Homepage */
+    .pagetitle {
+        font-size: 1.777em;
+    }
+
+    .topic .btn {
+        font-size: 1em;
+    }
+
+    .topic {
+        font-size: 1.333em;
+    }
+
+    #about .container h2 {
+        font-size: 3.157em;
+    }
+
+    #about .container {
+        text-align: center;
+    }
+
+    #about .container p,
+    #about .container blockquote {
+        padding: 0 80px;
+    }
+   
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 80%;
+    }
+
+    /* Topic related code */
+    .intro-showcase h1 {
+        font-size: 3.157em;
+    }
+
+    .intro-showcase h3 {
+        font-size: 1.777em;
+    }
+
+    .topic-content h2 {
+        font-size: 1.777em;
+    }
+
+    .topic-content h3 {
+        font-size: 1em;
+    }
+
+    .topic-content img {
+        width: 450px;
+    }
+
+    .next-topic-showcase h2 {
+        font-size: 2.369em;
+    }
+
+    .next-topic-showcase p {
+        font-size: 1.777em;
+    }
+
+
+    /* Before we start page*/
+    .intro-showcase .container {
+        width: 80%;
+    }
+
+    /* Search elsewhere page */
+    .nopage h1 {
+        font-size: 2.369em;
+    }
+
+    .nopage .btn {
+        padding: 20px 30px;
+    }
+
+    .nopage img {
+        width: 400px;
+    }
+
+    /* Introduction page */
+    .slider-wrapper {
+        font-size: 3.157em;
+    }
+
+    #intro-content .container p {
+        padding: 0 150px;
+    }
+
+    #intro-content .container h2 {
+        font-size: 2.369em;
+    }
+
+    /* Homepage */
+    #about .container p,
+    #about .container blockquote {
+        padding: 0 150px;
+    }
+
+    /* Instruction */
+    .slide-content span {
+        font-size: 3.157em;
+    }
+
+    .slide-content span:first-child {
+        font-size: 4.209em;
+        margin-top: -10px;
+    }
+
+    .slide-content #button5 span {
+        font-size: 3.157em;
+    }
+
+    .slide-content #button5 span {
+        font-size: 4.209em;
+    }
+
+    @keyframes CreateButton {
+        from {
+            border: 0 #fff solid;
+            padding: 0;
+            padding-top: 0;
+            height: 0;
+        }
+
+        to {
+            border: 1px #fff solid;
+            padding: 10px 10px;
+            height: 120px;
+
+        }
+    }
+
+    #Ready h2 {
+        font-size: 3.157em;
+    }
+
+    #Ready p {
+        font-size: 1.333em;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    /* Homepage */
+    .topics {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .topic {
+        width: 50%;
+    }
+
+    /* What isn't Digital Humanities page */
+    .video-container video {
+        left: 50%;
+    }
+
+
+    /* Open source page */
+    .topic-slide-content {
+        padding: 20px 220px;
+    }
+
+    .topic-slide-content span {
+        font-size: 3.157em;
+    }
+
+    .topicslider img {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+
+    /* Before we start page*/
+    .intro-showcase .container {
+        width: 80%;
+    }
+
+    /* Search elsewhere page */
+    .nopage h1 {
+        font-size: 3.157em;
+    }
+
+    .nopage img {
+        width: 500px;
+    }
+
+    /* Introduction page */
+    .slider-wrapper {
+        font-size: 4.209em;
+    }
+
+    .intro-header .container p {
+        font-size: 2.369em;
+        font-weight: 500;
+    }
+
+    #intro-content .container p {
+        padding: 0 220px;
+    }
+
+    #intro-content .container h2 {
+        font-size: 2.369em;
+    }
+
+    /* Homepage */
+    #about .container p,
+    #about .container blockquote {
+        padding: 0 200px;
+    }
+
+    /* Open source page */
+    .topic-slide-content {
+        padding: 20px 300px;
+    }
+
+    .topicslider img {
+        width: 40%;
+    }
+}
