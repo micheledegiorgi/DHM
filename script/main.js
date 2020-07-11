@@ -167,40 +167,35 @@ function LoadManager() {
         current = 0;
         Sliderflag = false;
         
-        
-        if (window.location.pathname == '/DHM/' ||
-            window.location.pathname == '/DHM/instructionmanual.html' ||
-            window.location.pathname == '/DHM/introduction.html' ||
-            window.location.pathname == '/DHM/searchelsewhere.html') {
-                FirstLoad();
-        }
-
-        if (window.location.pathname == '/DHM/beforewestart.html') {
+        if(document.body.classList.contains("beforewestart")){
             init();
         }
 
-        if (window.location.pathname == '/DHM/instructionmanual.html') {
+        if(document.body.classList.contains("introduction") ||
+            document.body.classList.contains("searchelsewhere")){
+            FirstLoad();
+        };
+
+        if(document.body.classList.contains("instructionmanual")){
+            FirstLoad();
             StartSlider();
-        }
+        };
 
-        if (window.location.pathname == '/DHM/index.html') {
+        if(document.body.classList.contains("homepage")){
+            FirstLoad();
             AboutRedirect();
-        }
+        };
 
-        if (window.location.pathname == '/DHM/topic/whatdh.html' ||
-            window.location.pathname == '/DHM/topic/opensource.html' ||
-            window.location.pathname == '/DHM/topic/generativehumanities.html' ||
-            window.location.pathname == '/DHM/topic/processgod.html' ||
-            window.location.pathname == '/DHM/topic/theorypractice.html' ||
-            window.location.pathname == '/DHM/topic/curation.html' ||
-            window.location.pathname == '/DHM/topic/discfinitude.html' ||
-            window.location.pathname == '/DHM/topic/beyonddh.html') {
+        if(document.body.classList.contains("opensource")){
             CConScroll();
-        }
-
-        if (window.location.pathname == '/DHM/topic/opensource.html') {
             StartTopicSlider();
-        }
+        };
+
+        if(document.body.classList.contains("topicpage")){
+            CConScroll();
+        };
+
+       
 
 
         
